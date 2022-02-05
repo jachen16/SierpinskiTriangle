@@ -32,15 +32,17 @@ public void mousePressed()
     redraw();
   }
 }
-public void mouseWheel(MouseEvent event) {
-  float e = event.getCount();
-  if (e < 0)
+public void keyPressed() {
+  if (key == CODED)
   {
-    z = z + 20;
-  } else
-  {
-    if(z > 20)
-    z = z - 20;
+    if(keyCode == UP)
+    {
+      z = z + 20;
+    } else if(keyCode == DOWN)
+    {
+      if(z > 20)
+      z = z - 20;
+    }
   }
 }
 
